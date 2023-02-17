@@ -1,0 +1,34 @@
+:root {
+    --light-gray: #9098A9;
+    --checked: #78D116;
+}
+
+.checkbox {
+    display: flex;
+    align-items: baseline;
+    gap: 0.3125em;
+
+}
+
+.checkbox label {
+    font-size: 1.2em;
+}
+
+.checkbox input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 1em;
+    height: 1em;
+    font: inherit;
+    border: 0.1em solid var(--light-gray);
+    margin-bottom: -0.125em;
+}
+.checkbox input[type=checkbox] {
+    border-radius: 0.25em;
+}
+.checkbox input:checked {
+    border-color: var(--light-gray);
+    background: var(--checked) border-box;
+    box-shadow: 0 0 0 0.1em inset #fff;
+}

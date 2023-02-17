@@ -12,6 +12,6 @@ describe('test', () => {
   );
   it('test 1', () => {
     render(app);
-    expect(screen.queryByText(/hello world/i)).toBeInTheDocument();
+    expect(screen.queryByText(/apps by host/i)).toBeInTheDocument();
   });
 });

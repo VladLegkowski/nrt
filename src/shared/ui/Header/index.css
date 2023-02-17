@@ -1,0 +1,5 @@
+.header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.9375em;
+}

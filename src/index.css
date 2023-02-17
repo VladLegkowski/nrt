@@ -3,12 +3,6 @@
   --application-background-color: #F5F5F5;
 }
 
-/* Font */
-@font-face {
-  font-family: 'Helvetica Neue';
-  src: url('./fonts/HelveticaNeue.ttf');
-}
-
 /* Styling */
 html,
 body,
@@ -19,10 +13,8 @@ body,
   min-height: 100%;
 }
 
-* {
-  font-family: 'Helvetica Neue', sans-serif;
-}
-
 #app {
   background-color: var(--application-background-color);
+  display: flex;
+  justify-content: center;
 }
