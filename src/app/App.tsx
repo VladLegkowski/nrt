@@ -14,7 +14,7 @@ function App() {
     <div className="application">
       <Header>
         <H1>Apps by Host</H1>
-        <H4>For user averylongemailadress@companyname.com</H4>
+        <H4>for user averylongemailadress@companyname.com</H4>
         <Checkbox checked={value} onChange={setValue}>
           <span>{value ? 'Show as an awesome grid' : 'Show as list'}</span>
         </Checkbox>

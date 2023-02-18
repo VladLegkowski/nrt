@@ -1,6 +1,4 @@
 .application {
   height: 100%;
-  margin-top: 3.75em;
-  max-width: 840px;
-  padding: 0 1.875em;
+  width: 780px;
 }
