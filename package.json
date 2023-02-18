@@ -50,6 +50,8 @@
     "jest-environment-jsdom": "^29.4.1",
     "lint-staged": "^13.1.0",
     "parcel": "^2.8.3",
+    "postcss": "^8.4.21",
+    "postcss-nested": "^6.0.0",
     "process": "^0.11.10",
     "serve": "^14.2.0",
     "sirv-cli": "^2.0.2",

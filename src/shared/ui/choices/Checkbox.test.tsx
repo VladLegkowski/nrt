@@ -4,7 +4,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 
 describe('checkbox', () => {
   const onChange = jest.fn();
-  const cProps = {
+  const cProps: CheckboxProps = {
     checked: false,
     onChange,
   };
@@ -15,26 +15,26 @@ describe('checkbox', () => {
     onChange.mockReset();
   });
 
-  it('checkbox is not checked', () => {
+  it('is not checked', () => {
     setup({ ...cProps });
     const checkbox = screen.getByRole('checkbox');
     expect(checkbox).not.toBeChecked();
   });
 
-  it('checkbox is checked', () => {
+  it('is checked', () => {
     setup({ ...cProps, checked: true });
     const checkbox = screen.getByRole('checkbox');
     expect(checkbox).toBeChecked();
   });
 
-  it('checkbox dispatches action on click', () => {
+  it('dispatches action on click', () => {
     setup({ ...cProps });
     const checkbox = screen.getByRole('checkbox');
     fireEvent.click(checkbox);
     expect(onChange).toHaveBeenCalledWith(true);
   });
 
-  it('checkbox renders optional child component', () => {
+  it('renders optional child component', () => {
     setup({ ...cProps, children: 'I am a support text' });
     expect(screen.queryByText(/i am a support text/i)).toBeInTheDocument();
   });

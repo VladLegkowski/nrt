@@ -1,5 +1,5 @@
 import React from 'react';
-import './typography.css';
+import styles from './H1.module.css';
 
 type H1Props = {
   children: React.ReactNode;
@@ -7,7 +7,7 @@ type H1Props = {
 
 function H1(props: H1Props) {
   const { children } = props;
-  return <h1 className="h1">{children}</h1>;
+  return <h1 className={styles.h1}>{children}</h1>;
 }
 
 export { H1 };

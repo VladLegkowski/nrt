@@ -1,5 +1,5 @@
 import React from 'react';
-import './choices.css';
+import styles from './Checkbox.module.css';
 
 export type CheckboxProps = {
   checked: boolean;
@@ -10,7 +10,7 @@ export type CheckboxProps = {
 function Checkbox(props: CheckboxProps) {
   const { checked, onChange, children } = props;
   return (
-    <div className="checkbox">
+    <div className={styles.checkbox}>
       <label>
         <input
           type="checkbox"
@@ -19,8 +19,8 @@ function Checkbox(props: CheckboxProps) {
             onChange(event.target.checked)
           }
         />
+        {children}
       </label>
-      {children}
     </div>
   );
 }

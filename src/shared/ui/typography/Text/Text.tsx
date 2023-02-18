@@ -1,12 +1,12 @@
 import React from 'react';
-import { clxs } from '../utils/clxs';
-import './typography.css';
+import { clxs } from '../../utils/clxs';
+import styles from './Text.module.css';
 
 type TextProps = {
   children: React.ReactNode;
+  opaque?: boolean;
   variant?: 'regular' | 'subtle';
   weight?: 'normal' | 'bold';
-  opaque?: boolean;
 };
 
 function Text(props: TextProps) {
@@ -17,10 +17,10 @@ function Text(props: TextProps) {
     weight = 'normal',
   } = props;
 
-  const className = clxs('text', {
-    'text--subtle': variant === 'subtle',
-    'text--bold': weight === 'bold',
-    'text--opaque': opaque,
+  const className = clxs(styles.text, {
+    [styles.subtle]: variant === 'subtle',
+    [styles.bold]: weight === 'bold',
+    [styles.opaque]: opaque,
   });
 
   return <span className={className}>{children}</span>;

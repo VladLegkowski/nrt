@@ -1,0 +1,7 @@
+@import '../typography.css';
+
+.h4 {
+    font-size: 1.125rem;
+    font-weight: normal;
+    flex-shrink: 1
+}

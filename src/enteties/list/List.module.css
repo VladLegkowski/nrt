@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.875em;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 375px);
+    grid-auto-rows: minmax(auto, 1fr);
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+
+}

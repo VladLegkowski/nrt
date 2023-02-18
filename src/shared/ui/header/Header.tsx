@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.css';
+import styles from './Header.module.css';
 
 interface HeaderProps {
   children: React.ReactNode;
@@ -7,7 +7,7 @@ interface HeaderProps {
 
 function Header(props: HeaderProps): JSX.Element {
   const { children } = props;
-  return <header className="header">{children}</header>;
+  return <header className={styles.header}>{children}</header>;
 }
 
 export { Header };

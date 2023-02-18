@@ -1,0 +1,22 @@
+@import '../typography.css';
+
+.text {
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: normal;
+    white-space: normal;
+    opacity: 1;
+}
+
+.subtle {
+    color: var(--text-color-subtle);
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.opaque {
+    font-size: 0.813rem;
+    opacity: 62%;
+}

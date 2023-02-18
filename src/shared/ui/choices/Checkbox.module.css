@@ -6,12 +6,12 @@
 .checkbox {
     display: flex;
     align-items: baseline;
-    gap: 0.3125em;
-
+    flex-shrink: 0
 }
 
 .checkbox label {
     font-size: 1.2em;
+    white-space: nowrap;
 }
 
 .checkbox input {
@@ -23,6 +23,8 @@
     font: inherit;
     border: 0.1em solid var(--light-gray);
     margin-bottom: -0.125em;
+    margin-right: 0.3125em;
+;
 }
 .checkbox input[type=checkbox] {
     border-radius: 0.25em;
