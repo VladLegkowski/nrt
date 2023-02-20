@@ -2,4 +2,9 @@
   display: flex;
   align-items: baseline;
   gap: 0.9375em;
+
+  > *:first-child,
+  *:last-child {
+    flex-shrink: 0
+  }
 }

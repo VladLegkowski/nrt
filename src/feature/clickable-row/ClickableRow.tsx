@@ -1,12 +1,12 @@
 import React from 'react';
-import styles from './Row.module.css';
+import styles from './ClickableRow.module.css';
 
-export type RowProps = {
+export type ClickableRowProps = {
   children: React.ReactNode;
   releaseNumber: number;
 };
 
-function Row(props: RowProps) {
+function ClickableRow(props: ClickableRowProps) {
   const { children, releaseNumber } = props;
   const handleClick = () => {
     alert(`Release number is ${releaseNumber}`);
@@ -28,4 +28,4 @@ function Row(props: RowProps) {
   );
 }
 
-export { Row };
+export { ClickableRow };

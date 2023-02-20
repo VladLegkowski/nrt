@@ -1,5 +1,5 @@
 import React from 'react';
-import { clxs } from '../../shared/ui/utils/clxs';
+import { classNames } from '../../shared/utils/classNames';
 import styles from './List.module.css';
 
 type ListProps = {
@@ -9,7 +9,7 @@ type ListProps = {
 function List(props: ListProps) {
   const { children, layout = 'grid' } = props;
 
-  const containerClassNames = clxs(styles.container, {
+  const containerClassNames = classNames(styles.container, {
     [styles.grid]: layout === 'grid',
     [styles.list]: layout === 'list',
   });

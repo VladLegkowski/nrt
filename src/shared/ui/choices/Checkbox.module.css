@@ -6,7 +6,6 @@
 .checkbox {
     display: flex;
     align-items: baseline;
-    flex-shrink: 0
 }
 
 .checkbox label {

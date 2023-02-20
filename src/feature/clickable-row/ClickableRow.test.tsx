@@ -1,16 +1,17 @@
 import React from 'react';
-import { Row, RowProps } from './Row';
+import { ClickableRow, ClickableRowProps } from './ClickableRow';
 import { render, screen, fireEvent } from '@testing-library/react';
 
-describe('row', () => {
+describe('clickable-row', () => {
   global.alert = jest.fn();
 
-  const cProps: RowProps = {
+  const cProps: ClickableRowProps = {
     releaseNumber: 7,
-    children: 'I am a row',
+    children: 'I am a clickable-row',
   };
 
-  const setup = (props: RowProps) => render(<Row {...props} />);
+  const setup = (props: ClickableRowProps) =>
+    render(<ClickableRow {...props} />);
 
   it('renders a child component', () => {
     setup(cProps);

@@ -1,5 +1,5 @@
 import React from 'react';
-import { clxs } from '../../utils/clxs';
+import { classNames } from '../../../utils/classNames';
 import styles from './Text.module.css';
 
 type TextProps = {
@@ -17,7 +17,7 @@ function Text(props: TextProps) {
     weight = 'normal',
   } = props;
 
-  const className = clxs(styles.text, {
+  const className = classNames(styles.text, {
     [styles.subtle]: variant === 'subtle',
     [styles.bold]: weight === 'bold',
     [styles.opaque]: opaque,
