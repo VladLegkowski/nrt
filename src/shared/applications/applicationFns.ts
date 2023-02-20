@@ -32,4 +32,22 @@ function mostSatisfyingAppsFn(
   return mostSatisfyingApps;
 }
 
-export { applicationsByHostFn, mostSatisfyingAppsFn };
+function getTopAppsByHostFn(
+  hostName: string,
+  applicationsByHost: ApplicationsByHost
+) {
+  const hostIndex = applicationsByHost[hostName];
+
+  if (hostIndex === undefined) {
+    return [];
+  }
+
+  return hostIndex.sort((a, b) => b.apdex - a.apdex).slice(0, 25);
+}
+
+function addAppToHostFn(
+  application: Application,
+  applicationsByHost: ApplicationsByHost
+) {}
+
+export { applicationsByHostFn, mostSatisfyingAppsFn, getTopAppsByHostFn };
