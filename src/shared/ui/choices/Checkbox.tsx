@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from './Checkbox.module.css';
 
-export type CheckboxProps = {
+export type CheckboxComponentProps = {
   checked: boolean;
   onChange: (checked: boolean) => void;
   children?: React.ReactNode;
 };
 
-function Checkbox(props: CheckboxProps) {
+function CheckboxComponent(props: CheckboxComponentProps) {
   const { checked, onChange, children } = props;
   return (
     <div className={styles.checkbox}>
@@ -25,4 +25,5 @@ function Checkbox(props: CheckboxProps) {
   );
 }
 
+const Checkbox = React.memo(CheckboxComponent);
 export { Checkbox };

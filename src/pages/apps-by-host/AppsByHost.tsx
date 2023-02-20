@@ -37,13 +37,14 @@ function AppsByHost(props: AppsByHostProps) {
               <Text weight="bold">{host}</Text>
               <ul>
                 {mostSatisfyingApps[host].map((application) => {
+                  const { name, version, apdex } = application;
                   return (
-                    <li key={host.concat(application.name)}>
-                      <ClickableRow releaseNumber={application.version}>
+                    <li key={host.concat(name)}>
+                      <ClickableRow releaseNumber={version}>
                         <Text variant="subtle" opaque>
-                          {application.apdex}
+                          {apdex}
                         </Text>
-                        <Text variant="subtle">{application.name}</Text>
+                        <Text variant="subtle">{name}</Text>
                       </ClickableRow>
                     </li>
                   );

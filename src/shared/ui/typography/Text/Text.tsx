@@ -2,14 +2,14 @@ import React from 'react';
 import { classNames } from '../../../utils/classNames';
 import styles from './Text.module.css';
 
-type TextProps = {
+type TextComponentProps = {
   children: React.ReactNode;
   opaque?: boolean;
   variant?: 'regular' | 'subtle';
   weight?: 'normal' | 'bold';
 };
 
-function Text(props: TextProps) {
+function TextComponent(props: TextComponentProps) {
   const {
     children,
     opaque = false,
@@ -26,4 +26,5 @@ function Text(props: TextProps) {
   return <span className={className}>{children}</span>;
 }
 
+const Text = React.memo(TextComponent);
 export { Text };

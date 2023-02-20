@@ -1,15 +1,16 @@
 import React from 'react';
-import { Checkbox, CheckboxProps } from './Checkbox';
+import { Checkbox, CheckboxComponentProps } from './Checkbox';
 import { render, screen, fireEvent } from '@testing-library/react';
 
 describe('checkbox', () => {
   const onChange = jest.fn();
-  const cProps: CheckboxProps = {
+  const cProps: CheckboxComponentProps = {
     checked: false,
     onChange,
   };
 
-  const setup = (props: CheckboxProps) => render(<Checkbox {...props} />);
+  const setup = (props: CheckboxComponentProps) =>
+    render(<Checkbox {...props} />);
 
   beforeEach(() => {
     onChange.mockReset();
