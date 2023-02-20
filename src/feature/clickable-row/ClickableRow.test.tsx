@@ -15,7 +15,7 @@ describe('clickable-row', () => {
 
   it('renders a child component', () => {
     setup(cProps);
-    expect(screen.queryByText(/i am a row/i)).toBeInTheDocument();
+    expect(screen.queryByText(/i am a clickable-row/i)).toBeInTheDocument();
   });
 
   it('triggers alert dialogue', () => {
