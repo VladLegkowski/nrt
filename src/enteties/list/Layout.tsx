@@ -1,15 +1,15 @@
 import React from 'react';
 import { classNames } from '../../shared/utils/classNames';
-import styles from './List.module.css';
+import styles from './Layout.module.css';
 
-type ListProps = {
+type LayoutProps = {
   children: React.ReactNode;
   layout?: 'grid' | 'list';
 };
-function List(props: ListProps) {
+function Layout(props: LayoutProps) {
   const { children, layout = 'grid' } = props;
 
-  const containerClassNames = classNames(styles.container, {
+  const containerClassNames = classNames(styles.layout, {
     [styles.grid]: layout === 'grid',
     [styles.list]: layout === 'list',
   });
@@ -17,4 +17,4 @@ function List(props: ListProps) {
   return <section className={containerClassNames}>{children}</section>;
 }
 
-export { List };
+export { Layout };

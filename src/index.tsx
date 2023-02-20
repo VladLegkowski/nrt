@@ -1,11 +1,11 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { Routing } from './pages/Routing';
+import { App } from './app/App';
 
 const container = document.getElementById('app');
 const root = createRoot(container as Element);
 root.render(
   <React.StrictMode>
-    <Routing />
+    <App />
   </React.StrictMode>
 );
