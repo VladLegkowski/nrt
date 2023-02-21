@@ -16,7 +16,7 @@
 
 ### The Application
 
-* On initial load user sees the app that displays a list of applications running on various hosts..
+* On initial load user sees the app that displays a list of applications running on various hosts.
 * Each application has a name, a list of contributors, a release version number, and a list of hosts that the app has been deployed at, as well as an Apdex metric.
 * User can change the layout of the application checking the checkbox components.
 * `getTopAppsByHost`, `addAppToHosts` and `removeAppFromHosts` functions implementation and tests can be found in `src/shared/applications`.
