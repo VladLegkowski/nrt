@@ -4,6 +4,8 @@ import {
   applicationsByHostFn,
   mostSatisfyingAppsFn,
   getTopAppsByHostFn,
+  addAppToHostsFn,
+  removeAppFromHostsFn,
 } from '../shared/applications/applicationFns';
 import { AppsByHost } from './apps-by-host/AppsByHost';
 import { withProviders } from './providers/with-providers';
@@ -60,7 +62,25 @@ const getTopAppsByHost = getTopAppsByHostFn(
   applicationsByHost
 );
 
-console.log(getTopAppsByHost);
+const app = {
+  name: 'Practical Wooden Gloves - Wunsch, Champlin and Reinger, LLC',
+  contributors: ['Bella Price'],
+  version: 1,
+  apdex: 55,
+  host: [
+    '128406fc-0d3f.tiana.biz',
+    'e0419f48-6a5a.craig.info',
+    'b0b655c5-928a.nadia.biz',
+    'e7bf58af-f0be.dallas.biz',
+  ],
+};
+
+// console.log(
+//   removeAppFromHostsFn('7e6272f7-098e.dakota.biz', applicationsByHost)
+// );
+console.log(applicationsByHost);
+
+removeAppFromHostsFn('7e6272f7-098e.dakota.biz', applicationsByHost);
 
 const router = createBrowserRouter([
   {

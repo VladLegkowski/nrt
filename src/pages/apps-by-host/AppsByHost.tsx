@@ -19,18 +19,18 @@ function AppsByHost(props: AppsByHostProps) {
   const {
     hostAppData: { mostSatisfyingApps, applicationsByHost },
   } = props;
-  const [value, setValue] = React.useState(false);
+  const [listLayout, setListLayout] = React.useState(false);
 
   return (
     <>
       <Header>
         <H1>Apps by Host</H1>
         <H4>for user averylongemailadress@companyname.com</H4>
-        <Checkbox checked={value} onChange={setValue}>
-          <Text>{value ? 'Show as an awesome grid' : 'Show as list'}</Text>
+        <Checkbox checked={listLayout} onChange={setListLayout}>
+          <Text>{listLayout ? 'Show as an awesome grid' : 'Show as list'}</Text>
         </Checkbox>
       </Header>
-      <Layout layout={!value ? 'grid' : 'list'}>
+      <Layout layout={listLayout ? 'list' : 'grid'}>
         {Object.keys(applicationsByHost).map((host) => {
           return (
             <Card key={host}>

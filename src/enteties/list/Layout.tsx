@@ -4,7 +4,7 @@ import styles from './Layout.module.css';
 
 type LayoutProps = {
   children: React.ReactNode;
-  layout?: 'grid' | 'list';
+  layout: 'grid' | 'list';
 };
 function Layout(props: LayoutProps) {
   const { children, layout = 'grid' } = props;

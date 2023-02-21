@@ -17,14 +17,14 @@ function applicationsByHostFn(data: Application[]): ApplicationsByHost {
 }
 
 function mostSatisfyingAppsFn(
-  appsByHost: ApplicationsByHost
+  applicationsByHost: ApplicationsByHost
 ): ApplicationsByHost {
   const mostSatisfyingApps: ApplicationsByHost = {};
-  const applicationsByHostKeys = Object.keys(appsByHost);
+  const applicationsByHostKeys = Object.keys(applicationsByHost);
 
-  for (let k = 0; k < applicationsByHostKeys.length; k++) {
-    const apps = appsByHost[applicationsByHostKeys[k]];
-    mostSatisfyingApps[applicationsByHostKeys[k]] = apps
+  for (let i = 0; i < applicationsByHostKeys.length; i++) {
+    const apps = applicationsByHost[applicationsByHostKeys[i]];
+    mostSatisfyingApps[applicationsByHostKeys[i]] = apps
       .sort((a, b) => b.apdex - a.apdex)
       .slice(0, 5);
   }
@@ -45,9 +45,44 @@ function getTopAppsByHostFn(
   return hostIndex.sort((a, b) => b.apdex - a.apdex).slice(0, 25);
 }
 
-function addAppToHostFn(
+function addAppToHostsFn(
   application: Application,
   applicationsByHost: ApplicationsByHost
-) {}
+) {
+  const applicationsByHostUpdated = { ...applicationsByHost };
 
-export { applicationsByHostFn, mostSatisfyingAppsFn, getTopAppsByHostFn };
+  for (let i = 0; i < application.host.length; i++) {
+    if (applicationsByHostUpdated[application.host[i]] === undefined) {
+      applicationsByHostUpdated[application.host[i]] = [];
+    }
+
+    applicationsByHostUpdated[application.host[i]].push(application);
+    applicationsByHostUpdated[application.host[i]] = getTopAppsByHostFn(
+      application.host[i],
+      applicationsByHostUpdated
+    );
+  }
+
+  return applicationsByHostUpdated;
+}
+
+function removeAppFromHostsFn(
+  hostName: string,
+  applicationsByHost: ApplicationsByHost
+) {
+  const applicationsByHostUpdated = { ...applicationsByHost };
+
+  const applicationsByHostKeys = Object.keys(applicationsByHostUpdated);
+
+  for (let i = 0; i < applicationsByHostKeys.length; i++) {}
+
+  return applicationsByHostUpdated;
+}
+
+export {
+  applicationsByHostFn,
+  mostSatisfyingAppsFn,
+  getTopAppsByHostFn,
+  addAppToHostsFn,
+  removeAppFromHostsFn,
+};
