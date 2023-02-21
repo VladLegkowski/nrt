@@ -1,24 +1,26 @@
 :root {
-    /* Text colors */
-    --text-color-subtle: #6A6A6A;
-    --text-color: #000000;
+  /* Text colors */
+  --text-color-subtle: #6a6a6a;
+  --text-color: #000000;
 }
 
 @font-face {
-    font-family: 'Helvetica Neue';
-    src: url('../../../fonts/HelveticaNeue.ttf');
+  font-family: 'Helvetica Neue';
+  src: url('../../../fonts/HelveticaNeue.ttf');
 }
 
-span, h1, h4 {
-    font-family: 'Helvetica Neue', sans-serif;
-    line-height: 1.2;
+span,
+h1,
+h4 {
+  font-family: 'Helvetica Neue', sans-serif;
+  line-height: 1.2;
 }
 
 ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 1.4375em;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4375em;
 }

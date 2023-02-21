@@ -8,6 +8,9 @@
       "esnext"
     ],
     "types": ["node", "jest", "@testing-library/jest-dom", "@testing-library/jest-dom/extend-expect"],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -24,6 +27,7 @@
   "include": [
     "src/*",
     "cypress",
+    "**/test/**/*.tsx",
     "./jest.config.ts",
     "./jest.setup.ts",
   ]

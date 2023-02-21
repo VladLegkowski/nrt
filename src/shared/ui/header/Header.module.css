@@ -5,6 +5,6 @@
 
   > *:first-child,
   *:last-child {
-    flex-shrink: 0
+    flex-shrink: 0;
   }
 }

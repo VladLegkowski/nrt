@@ -1,9 +1,9 @@
 @import '../typography.css';
 
 .h4 {
-    font-size: 1.125rem;
-    font-weight: normal;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  font-size: 1.125rem;
+  font-weight: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

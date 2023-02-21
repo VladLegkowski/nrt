@@ -1,17 +1,17 @@
 .layout {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.875em;
-    padding-bottom: 1.875em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.875em;
+  padding-bottom: 1.875em;
 }
 
 .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 375px);
-    grid-auto-rows: minmax(auto, 1fr);
+  display: grid;
+  grid-template-columns: repeat(2, 375px);
+  grid-auto-rows: minmax(auto, 1fr);
 }
 
 .list {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }

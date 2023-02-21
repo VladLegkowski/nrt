@@ -1,7 +1,7 @@
 .card {
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    gap: 1.4375em;
-    padding: 1.875em;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4375em;
+  padding: 1.875em;
 }
