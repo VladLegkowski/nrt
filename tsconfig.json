@@ -25,9 +25,8 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src/*",
+    "src",
     "cypress",
-    "**/test/**/*.tsx",
     "./jest.config.ts",
     "./jest.setup.ts",
   ]
