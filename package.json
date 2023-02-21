@@ -10,10 +10,7 @@
     "test:unit": "jest --watchAll=false",
     "test:e2e": "cypress run --browser chrome",
     "cypress:open": "cypress open",
-    "prettier": "prettier --write .",
-    "test:e2e:ci": "npx start-server-and-test serve:e2e http://localhost:3333 test:e2e:run",
-    "test:e2e:run": "CYPRESS_BASE_URL=http://localhost:3333 npx cypress run",
-    "serve:e2e": "node_modules/.bin/sirv dist --quiet --single --port 3333"
+    "prettier": "prettier --write ."
   },
   "keywords": [],
   "author": "",
@@ -52,9 +49,6 @@
     "postcss": "^8.4.21",
     "postcss-nested": "^6.0.0",
     "process": "^0.11.10",
-    "serve": "^14.2.0",
-    "sirv-cli": "^2.0.2",
-    "start-server-and-test": "^1.15.3",
     "ts-jest": "^29.0.5",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.5"
