@@ -2,11 +2,10 @@ import React from 'react';
 import styles from './ClickableRow.module.css';
 
 export type ClickableRowProps = {
-  children: React.ReactNode;
   releaseNumber: number;
 };
 
-function ClickableRow(props: ClickableRowProps) {
+function ClickableRow(props: React.PropsWithChildren<ClickableRowProps>) {
   const { children, releaseNumber } = props;
   const handleClick = () => {
     alert(`Release number is ${releaseNumber}`);

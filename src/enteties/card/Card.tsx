@@ -1,10 +1,7 @@
 import React from 'react';
 import styles from './Card.module.css';
 
-type CardProps = {
-  children: React.ReactNode;
-};
-function Card(props: CardProps) {
+function Card(props: React.PropsWithChildren) {
   const { children } = props;
   return <article className={styles.card}>{children}</article>;
 }

@@ -1,11 +1,7 @@
 import React from 'react';
 import styles from './H4.module.css';
 
-type H4ComponentProps = {
-  children: React.ReactNode;
-};
-
-function H4Component(props: H4ComponentProps) {
+function H4Component(props: React.PropsWithChildren) {
   const { children } = props;
   return <h4 className={styles.h4}>{children}</h4>;
 }

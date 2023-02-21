@@ -3,13 +3,12 @@ import { classNames } from '../../../utils/classNames';
 import styles from './Text.module.css';
 
 type TextComponentProps = {
-  children: React.ReactNode;
   opaque?: boolean;
   variant?: 'regular' | 'subtle';
   weight?: 'normal' | 'bold';
 };
 
-function TextComponent(props: TextComponentProps) {
+function TextComponent(props: React.PropsWithChildren<TextComponentProps>) {
   const {
     children,
     opaque = false,

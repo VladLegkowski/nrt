@@ -1,11 +1,7 @@
 import React from 'react';
 import styles from './Header.module.css';
 
-interface HeaderComponentProps {
-  children: React.ReactNode;
-}
-
-function HeaderComponent(props: HeaderComponentProps): JSX.Element {
+function HeaderComponent(props: React.PropsWithChildren) {
   const { children } = props;
   return <header className={styles.header}>{children}</header>;
 }
