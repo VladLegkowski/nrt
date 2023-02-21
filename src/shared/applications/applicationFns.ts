@@ -33,10 +33,10 @@ function mostSatisfyingAppsFn(
 }
 
 function getTopAppsByHostFn(
-  hostName: string,
+  host: string,
   applicationsByHost: ApplicationsByHost
 ) {
-  const hostIndex = applicationsByHost[hostName];
+  const hostIndex = applicationsByHost[host];
 
   if (hostIndex === undefined) {
     return [];
@@ -57,24 +57,24 @@ function addAppToHostsFn(
     }
 
     applicationsByHostUpdated[application.host[i]].push(application);
-    applicationsByHostUpdated[application.host[i]] = getTopAppsByHostFn(
-      application.host[i],
-      applicationsByHostUpdated
-    );
   }
 
   return applicationsByHostUpdated;
 }
 
 function removeAppFromHostsFn(
-  hostName: string,
+  application: Application,
   applicationsByHost: ApplicationsByHost
 ) {
   const applicationsByHostUpdated = { ...applicationsByHost };
 
   const applicationsByHostKeys = Object.keys(applicationsByHostUpdated);
 
-  for (let i = 0; i < applicationsByHostKeys.length; i++) {}
+  for (let i = 0; i < applicationsByHostKeys.length; i++) {
+    const apps = applicationsByHostUpdated[application.host[i]];
+    const index = apps?.findIndex((a) => a.name === application.name);
+    apps?.splice(index, 1);
+  }
 
   return applicationsByHostUpdated;
 }

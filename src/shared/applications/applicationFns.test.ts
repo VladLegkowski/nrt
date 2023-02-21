@@ -3,14 +3,17 @@ import {
   mostSatisfyingAppsFn,
   getTopAppsByHostFn,
   addAppToHostsFn,
+  removeAppFromHostsFn,
 } from './applicationFns';
 import {
   mocks,
   applicationsByHost,
   mostSatisfyingApps,
   topAppsByHost,
-  application,
+  applicationAdd,
+  applicationRemove,
   addAppToHost,
+  removeAppToHost,
 } from '../mocks/mocks';
 
 describe('application by host functions', () => {
@@ -42,8 +45,16 @@ describe('application by host functions', () => {
   describe('addAppToHostsFn', () => {
     it('returns expected object', () => {
       expect(
-        addAppToHostsFn(application, applicationsByHostFn(mocks))
+        addAppToHostsFn(applicationAdd, applicationsByHostFn(mocks))
       ).toMatchObject(addAppToHost);
+    });
+  });
+
+  describe('removeAppFromHostsFn', () => {
+    it('returns expected object', () => {
+      expect(
+        removeAppFromHostsFn(applicationRemove, applicationsByHostFn(mocks))
+      ).toMatchObject(removeAppToHost);
     });
   });
 });
