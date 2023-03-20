@@ -11,8 +11,8 @@ import { Text } from '../../shared/ui/typography/Text/Text';
 
 type AppsByHostProps = {
   hostAppData: {
-    mostSatisfyingApps: ApplicationsByHost;
     applicationsByHost: ApplicationsByHost;
+    mostSatisfyingApps: ApplicationsByHost;
   };
 };
 function AppsByHost(props: AppsByHostProps) {
