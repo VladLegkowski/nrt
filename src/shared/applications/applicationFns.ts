@@ -58,7 +58,6 @@ function addAppToHostsFn(
 
     applicationsByHostUpdated[application.host[i]].push(application);
   }
-
   return applicationsByHostUpdated;
 }
 
