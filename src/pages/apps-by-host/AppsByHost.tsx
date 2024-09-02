@@ -1,12 +1,12 @@
 import React from 'react';
 import { ApplicationsByHost } from '../../shared/applications/model';
-import { Card } from '../../enteties/card/Card';
+import { Card } from '../../entities/card/Card';
 import { Checkbox } from '../../shared/ui/choices/Checkbox';
 import { ClickableRow } from '../../feature/clickable-row/ClickableRow';
 import { H1 } from '../../shared/ui/typography/H1/H1';
 import { H4 } from '../../shared/ui/typography/H4/H4';
 import { Header } from '../../shared/ui/header/Header';
-import { Layout } from '../../enteties/list/Layout';
+import { Layout } from '../../entities/list/Layout';
 import { Text } from '../../shared/ui/typography/Text/Text';
 
 type AppsByHostProps = {
