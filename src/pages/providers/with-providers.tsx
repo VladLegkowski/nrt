@@ -1,10 +1,10 @@
 import React, { Suspense } from 'react';
 import compose from 'compose-function';
-import { ErrorBoundary } from '../../shared/error-boundary/ErrorBoundary';
+import { ErrorBoundary } from 'react-error-boundary';
 
 const providers = (component: () => React.ReactNode) => () => {
   return (
-    <ErrorBoundary fallback={<div>Something went wrong</div>}>
+    <ErrorBoundary fallback={<div>Something went wrong...</div>}>
       <Suspense fallback={<div>Loading...</div>}>{component()}</Suspense>
     </ErrorBoundary>
   );

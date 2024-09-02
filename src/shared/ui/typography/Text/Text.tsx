@@ -8,7 +8,7 @@ type TextComponentProps = {
   weight?: 'normal' | 'bold';
 };
 
-function TextComponent(props: React.PropsWithChildren<TextComponentProps>) {
+function Text(props: React.PropsWithChildren<TextComponentProps>) {
   const {
     children,
     opaque = false,
@@ -25,5 +25,4 @@ function TextComponent(props: React.PropsWithChildren<TextComponentProps>) {
   return <span className={className}>{children}</span>;
 }
 
-const Text = React.memo(TextComponent);
 export { Text };
